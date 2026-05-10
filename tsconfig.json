@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "esnext",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+
+    "experimentalDecorators": true,
+    /* Modules */
+    "module": "nodenext",                             /* Specify what module code is generated. */
+    "rootDir": "./src",                                  /* Specify the root folder within your source files. */
+    "moduleResolution": "nodenext",
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */
+    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
+}
