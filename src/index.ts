@@ -17,6 +17,6 @@ dbInstance.getConnectionObject()
     app.listen(3000, () => console.log('Server running on port 3000'));
 })
 .catch(err => {
-    console.error('Server failed to start due to DB error');
+    console.error(err?.message || 'Server failed to start due to DB error');
     process.exit(1);
 });
