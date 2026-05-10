@@ -6,7 +6,8 @@
     "experimentalDecorators": true,
     /* Modules */
     "module": "nodenext",                             /* Specify what module code is generated. */
-    "rootDir": "./src",                                  /* Specify the root folder within your source files. */
+    "rootDir": "./src", 
+    "outDir": "./dist",                                 /* Specify the root folder within your source files. */
     "moduleResolution": "nodenext",
     "strict": true,                                      /* Enable all strict type-checking options. */
     "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */
