@@ -28,7 +28,7 @@ export const fetchOrderById = async (req: Request, res: Response) => {
     const order = await Order.findOne({ _id: id, userId }).populate({
         path: 'items.productId',
         select: 'name imageUrl price description',
-    }).exec();
+    }).populate('shipping', 'name street city state country zip').exec();
     if (!order) {
         throw new PoccError(404, 'Order not found');
     }
