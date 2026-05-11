@@ -18,8 +18,6 @@ export const authenticate = (req: Request, res: Response, next: NextFunction) =>
 
     const verified = jwt.verify(token, process.env.JWT_SECRET || '');
 
-    console.log('Verified Token:', verified);
-
     // @ts-ignore
     req.user = verified;
 
