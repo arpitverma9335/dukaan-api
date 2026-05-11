@@ -8,10 +8,11 @@ export const fetchOrders = async (req: Request, res: Response) => {
     // @ts-ignore
     const { userId } = req.user;
 
-    const orders = await Order.find({ userId }).populate({
+    const orders = await Order.find({ userId }, { 
+            items: { $slice: 1 }
+        }).populate({
         path: 'items.productId',
-        select: 'name imageUrl',
-        options: { limit: 1 }
+        select: 'name imageUrl'
     }).exec();
     res.json({ 
         success: true,
